@@ -137,3 +137,11 @@ footer a { color: var(--color-muted); text-decoration: none; margin-left: var(--
   .footer-links { flex-direction: column; gap: var(--space-sm); }
   .footer-links a { margin: 0; }
 }
+
+/* Photo credits block — Hallmark § 76: credits must be visible, never invented */
+.footer-photo-credits {
+  margin-top: var(--space-xs);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
