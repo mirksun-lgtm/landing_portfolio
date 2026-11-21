@@ -1,4 +1,8 @@
-/* Hallmark tokens for Studio theme */
+/* Hallmark · v2.0.0 · shape: Marquee Hero · theme: Studio · genre: editorial · job: sign up, the action in the hero and beside the price */
+
+/* Hallmark critique line: all tokens from Studio theme, no literals past :root */
+
+/* Waivers: none */
 :root {
   --color-paper: oklch(97.2% 0.006 215);
   --color-paper-2: oklch(94% 0.009 215);
