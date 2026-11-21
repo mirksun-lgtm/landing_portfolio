@@ -3,107 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Профессиональный SPA-уход для лица и тела. Опыт 5 лет. Запись на консультацию мгновенно в Telegram. Цены и услуги мастера.">
-  <title>Косметолог: профессиональный уход за лицом и телесом</title>
+  <meta name="description" content="Клиника эстетической медицины Aura: безоперационные процедуры для лица и тела. Сертифицированный косметолог, запись в Telegram.">
+  <title>Aura: эстетическая медицина и уход за лицом</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Верхняя плашка -->
+  <div class="topbar">
+    <p>Новым клиентам: скидка 15% на первую процедуру</p>
+  </div>
+
   <!-- Шапка -->
   <header class="nav">
     <div class="container">
-      <nav>
-        <a href="#" class="logo">Мастерская красоты</a>
+      <a href="#" class="logo" aria-label="Aura — на главную">AURA<span class="logo-sub">clinic</span></a>
+      <nav aria-label="Навигация">
         <ul class="nav-links">
-          <li><a href="#services">Услуги</a></li>
+          <li><a href="#specialties">Услуги</a></li>
           <li><a href="#about">Обо мне</a></li>
+          <li><a href="#results">Результаты</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
+      <a href="https://t.me/username" class="btn btn--primary nav-cta" target="_blank" rel="noopener">Записаться</a>
     </div>
   </header>
 
   <!-- Герой -->
   <section class="hero">
-    <div class="container">
+    <div class="container hero-inner">
       <div class="hero-content">
-        <h1>Преображаюсь за 60 минут</h1>
-        <p class="lead">Профессиональная SPA-уход для лица и тела<br>Запись мгновенно в Telegram</p>
+        <p class="eyebrow-note">Клиника эстетической медицины</p>
+        <h1>Красота без разрезов и операции</h1>
+        <p class="lead">Современные безоперационные процедуры, которые подчёркивают вашу естественную красоту. Бережно, безопасно, с результатом, который видно.</p>
+        <a href="https://t.me/username" class="btn btn--primary" target="_blank" rel="noopener">Записаться на консультацию</a>
+      </div>
+      <div class="hero-image">
+        <div class="placeholder" data-slot="hero" data-alt="Косметолог в светлом кабинете, Portrait"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Полоса специализаций -->
+  <section class="specialties-strip" id="specialties">
+    <div class="container strip-grid">
+      <div class="strip-item">
+        <span class="strip-icon">✦</span>
+        <h3>Безоперационные<br>процедуры</h3>
+        <p>Результат без разрезов и длительной реабилитации</p>
+      </div>
+      <div class="strip-item">
+        <span class="strip-icon">✧</span>
+        <h3>Точная<br>диагностика</h3>
+        <p>Подбираем уход под ваш тип кожи и задачу</p>
+      </div>
+      <div class="strip-item">
+        <span class="strip-icon">✦</span>
+        <h3>Сертифицированный<br>косметолог</h3>
+        <p>Опыт 5 лет и регулярное повышение квалификации</p>
+      </div>
+      <div class="strip-item">
+        <span class="strip-icon">✧</span>
+        <h3>Комфорт<br>и забота</h3>
+        <p>Спокойная атмосфера и внимание к каждому клиенту</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Обо мне / Без разрезов -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="eyebrow-note">Почему выбирают нас</p>
+        <h2>Естественная красота без вмешательств</h2>
+        <p class="lead">Мыcombine медицинскую точность и бережный подход, чтобы результат выглядел естественно, а процедуры проходили комфортно.</p>
+        <p>Работаю только с сертифицированными средствами и современными методиками. Каждая процедура начинается с консультации и подбора индивидуального плана ухода.</p>
         <a href="https://t.me/username" class="btn btn--primary" target="_blank" rel="noopener">Записаться</a>
       </div>
-      <!-- Фото герой (заглушка) -->
-      <div class="hero-image">
-        <div class="placeholder" data-slot="hero" data-alt="Мастер наносит белую маску на лицо клиентке кистью"></div>
+      <div class="about-image">
+        <div class="placeholder" data-slot="about" data-alt="Косметолог за работой в светлом кабинете"></div>
       </div>
     </div>
   </section>
 
-  <!-- Обо мне -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img">
-          <div class="placeholder" data-slot="about" data-alt="Довольная клиентка смотрится в зеркало после процедуры"></div>
-        </div>
-        <div class="about-text">
-          <h2>Обо мне</h2>
-          <p>5 лет опыта в SPA-индустрии. Люблю помогать клиентам чувствовать себя уверенно и сиять. Использую только сертифицированные средства.</p>
-          <p>Сертификат профессионального обучения 2021</p>
-          <p>Регулярные тренинги по новым техникам</p>
-        </div>
+  <!-- До / После -->
+  <section class="results" id="results">
+    <div class="container results-inner">
+      <div class="results-head">
+        <p class="eyebrow-note">Реальные результаты</p>
+        <h2>До и после</h2>
+        <p>Посмотрите, какие изменения дают наши процедуры</p>
+      </div>
+      <div class="results-grid">
+        <figure class="compare">
+          <div class="placeholder" data-slot="process-1" data-alt="Клиентка до процедуры"></div>
+          <figcaption>До</figcaption>
+        </figure>
+        <figure class="compare">
+          <div class="placeholder" data-slot="process-2" data-alt="Клиентка после процедуры"></div>
+          <figcaption>После</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- Услуги -->
+  <!-- Услуги / Специальности -->
   <section class="services" id="services">
     <div class="container">
-      <h2>Услуги</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Классический уход</h3>
-          <p>Основной пакет ухода за лицом</p>
-          <span class="price">от 2 500 ₽</span>
-        </div>
-        <div class="service-card">
-          <h3>Аппаратный пилинг</h3>
-          <p>Ультразвуковой пилинг</p>
-          <span class="price">от 3 200 ₽</span>
-        </div>
-        <div class="service-card">
-          <h3>Массаж лица</h3>
-          <p>Релаксирующий массаж</p>
-          <span class="price">от 2 800 ₽</span>
-        </div>
-        <div class="service-card">
-          <h3>Плазмолазация</h3>
-          <p>Омоложение плазмой</p>
-          <span class="price">от 4 500 ₽</span>
-        </div>
+      <div class="services-head">
+        <p class="eyebrow-note">Направления</p>
+        <h2>Специальности</h2>
+        <p>Выберите то, что важно именно вам</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Фото процесса -->
-  <section class="process" id="process">
-    <div class="container">
-      <h2>Процесс работы</h2>
-      <div class="process-grid">
-        <div class="process-item">
-          <div class="placeholder" data-slot="process-1" data-alt="Мастер-косметолог за работой в светлом кабинете"></div>
-          <span>Консультация</span>
-        </div>
-        <div class="process-item">
-          <div class="placeholder" data-slot="process-2" data-alt="Гости салона отдыхают в халатах после процедуры"></div>
-          <span>Маски</span>
-        </div>
-        <div class="process-item">
-          <div class="placeholder" data-slot="process-3" data-alt="Набор натуральных масел для ухода за кожей"></div>
-          <span>Финиш</span>
-        </div>
-        <div class="process-item">
-          <div class="placeholder" data-slot="process-4" data-alt="Финальный этап ухода — маска на лице"></div>
-          <span>Результат</span>
-        </div>
+      <div class="tabs" role="tablist" aria-label="Специальности">
+        <button type="button" class="tab active" role="tab" aria-selected="true" data-tab="face">Для лица</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" data-tab="body">Для тела</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" data-tab="health">Здоровье кожи</button>
+      </div>
+      <div class="services-grid" id="tab-face">
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="process-3" data-alt="Процедура ухода за лицом"></div></div>
+          <h3>Формализация<br>лица</h3>
+          <p>Мягкая коррекция контуров без операции</p>
+          <span class="card-more">Подробнее →</span>
+        </article>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="process-4" data-alt="Уход за кожей лица"></div></div>
+          <h3>Омоложение<br>кожи</h3>
+          <p>Восстановление упругости и сияния</p>
+          <span class="card-more">Подробнее →</span>
+        </article>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="process-1" data-alt="Уход за лицом"></div></div>
+          <h3>Чистка<br>лица</h3>
+          <p>Глубокая очистка и сужение пор</p>
+          <span class="card-more">Подробнее →</span>
+        </article>
       </div>
     </div>
   </section>
@@ -111,20 +149,23 @@
   <!-- Отзывы -->
   <section class="reviews" id="reviews">
     <div class="container">
-      <h2>Отзывы</h2>
+      <div class="reviews-head">
+        <p class="eyebrow-note">Отзывы</p>
+        <h2>Нам доверяют</h2>
+      </div>
       <div class="reviews-grid">
         <div class="review-card">
-          <p>«Великолепный результат! Лицо сразу сияет».</p>
+          <p>«Очень внимательный косметолог. Процедура прошла комфортно, результат превзошёл ожидания».</p>
           <cite>Анна, 34 года</cite>
           <span class="review-badge">пример</span>
         </div>
         <div class="review-card">
-          <p>«Профессионал, грамотный подход, всё сделали аккуратно».</p>
-          <cite>Мария, 28 года</cite>
+          <p>«Впервые решилась на безоперационное омоложение. Идеально естественный результат, рекомендую».</p>
+          <cite>Мария, 28 лет</cite>
           <span class="review-badge">пример</span>
         </div>
         <div class="review-card">
-          <p>«Уже третьий раз, ни разу не разочаровываю».</p>
+          <p>«Профессиональный подход и никакой “рекламы”. Подобрали именно то, что нужно моей коже».</p>
           <cite>Елена, 41 год</cite>
           <span class="review-badge">пример</span>
         </div>
@@ -134,27 +175,17 @@
 
   <!-- Контакты -->
   <section class="contacts" id="contacts">
-    <div class="container">
-      <h2>Контакты</h2>
-      <div class="contact-info">
-        <div class="contact-item">
-          <div>
-            <strong>Telegram:</strong> <a href="https://t.me/username" target="_blank" rel="noopener">@username</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div>
-            <strong>Телефон:</strong> +7 (999) 123-45-67
-          </div>
-        </div>
+    <div class="container contacts-inner">
+      <div>
+        <p class="eyebrow-note">Контакты</p>
+        <h2>Запишитесь<br>на консультацию</h2>
+        <p>Ответим на вопросы и подберём время, удобное для вас</p>
+        <p class="contact-line"><strong>Telegram:</strong> <a href="https://t.me/username" target="_blank" rel="noopener">@username</a></p>
+        <p class="contact-line"><strong>Телефон:</strong> +7 (999) 123-45-67</p>
       </div>
       <form class="contact-form">
-        <div class="form-group">
-          <input type="text" placeholder="Имя" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" placeholder="Телефон" required>
-        </div>
+        <div class="form-group"><input type="text" placeholder="Ваше имя" aria-label="Имя" required></div>
+        <div class="form-group"><input type="tel" placeholder="Телефон" aria-label="Телефон" required></div>
         <button type="submit" class="btn btn--primary">Отправить в Telegram</button>
       </form>
     </div>
@@ -163,12 +194,12 @@
   <!-- Футер -->
   <footer>
     <div class="container">
-      <p>© 2026 Мастерская красоты. Все права защищены</p>
+      <a href="#" class="logo" aria-label="Aura — на главную">AURA<span class="logo-sub">clinic</span></a>
+      <p>© 2026 Aura Clinic. Все права защищены</p>
       <div class="footer-links">
         <a href="#">Политика конфиденциальности</a>
         <a href="#">Публичная оферта</a>
       </div>
-      <!-- Фото-кредиты: подставляются скриптом (CC BY требует указания авторов) -->
       <div class="footer-photo-credits" data-credits>Photographs: загрузка…</div>
     </div>
   </footer>
