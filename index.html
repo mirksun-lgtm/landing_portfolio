@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Профессиональный SPA-уход для лица и тела. Опыт 5 лет. Запись на консультацию мгновенно в Telegram. Цены и услуги мастера.">
-  <title>Косметолог — профессиональный уход за лицом и телесом</title>
+  <title>Косметолог: профессиональный уход за лицом и телесом</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <a href="#" class="logo">Мастерская красоты</a>
         <ul class="nav-links">
           <li><a href="#services">Услуги</a></li>
-          <li><a="#about">Обо мне</a></li>
+          <li><a href="#about">Обо мне</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
@@ -28,11 +28,11 @@
       <div class="hero-content">
         <h1>Преображаюсь за 60 минут</h1>
         <p class="lead">Профессиональная SPA-уход для лица и тела<br>Запись мгновенно в Telegram</p>
-        <a href="t.me/username?start=book" class="btn btn-primary">Записаться</a>
+        <a href="https://t.me/username" class="btn btn--primary" target="_blank" rel="noopener">Записаться</a>
       </div>
       <!-- Фото герой (заглушка) -->
       <div class="hero-image">
-        <div class="placeholder" data-slot="hero" data-alt="Фото процесса ухода за лицом"></div>
+        <div class="placeholder" data-slot="hero" data-alt="Мастер наносит белую маску на лицо клиентке кистью"></div>
       </div>
     </div>
   </section>
@@ -42,7 +42,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-img">
-          <div class="placeholder" data-slot="about" data-alt="Фото мастера"></div>
+          <div class="placeholder" data-slot="about" data-alt="Довольная клиентка смотрится в зеркало после процедуры"></div>
         </div>
         <div class="about-text">
           <h2>Обо мне</h2>
@@ -89,19 +89,19 @@
       <h2>Процесс работы</h2>
       <div class="process-grid">
         <div class="process-item">
-          <div class="placeholder" data-slot="process-1" data-alt="Консультация клиента"></div>
+          <div class="placeholder" data-slot="process-1" data-alt="Мастер-косметолог за работой в светлом кабинете"></div>
           <span>Консультация</span>
         </div>
         <div class="process-item">
-          <div class="placeholder" data-slot="process-2" data-alt="Нанесение масок"></div>
+          <div class="placeholder" data-slot="process-2" data-alt="Гости салона отдыхают в халатах после процедуры"></div>
           <span>Маски</span>
         </div>
         <div class="process-item">
-          <div class="placeholder" data-slot="process-3" data-alt="Финишный уход"></div>
+          <div class="placeholder" data-slot="process-3" data-alt="Набор натуральных масел для ухода за кожей"></div>
           <span>Финиш</span>
         </div>
         <div class="process-item">
-          <div class="placeholder" data-slot="process-4" data-alt="Финальный результат"></div>
+          <div class="placeholder" data-slot="process-4" data-alt="Финальный этап ухода — маска на лице"></div>
           <span>Результат</span>
         </div>
       </div>
@@ -115,17 +115,17 @@
       <div class="reviews-grid">
         <div class="review-card">
           <p>«Великолепный результат! Лицо сразу сияет».</p>
-          <cite>— Анна, 34 года</cite>
+          <cite>Анна, 34 года</cite>
           <span class="review-badge">пример</span>
         </div>
         <div class="review-card">
           <p>«Профессионал, грамотный подход, всё сделали аккуратно».</p>
-          <cite>— Мария, 28 года</cite>
+          <cite>Мария, 28 года</cite>
           <span class="review-badge">пример</span>
         </div>
         <div class="review-card">
           <p>«Уже третьий раз, ни разу не разочаровываю».</p>
-          <cite>— Елена, 41 год</cite>
+          <cite>Елена, 41 год</cite>
           <span class="review-badge">пример</span>
         </div>
       </div>
@@ -138,13 +138,11 @@
       <h2>Контакты</h2>
       <div class="contact-info">
         <div class="contact-item">
-          <span class="icon">📲</span>
           <div>
-            <strong>Telegram:</strong> <a href="t.me/username">@username</a>
+            <strong>Telegram:</strong> <a href="https://t.me/username" target="_blank" rel="noopener">@username</a>
           </div>
         </div>
         <div class="contact-item">
-          <span class="icon">📞</span>
           <div>
             <strong>Телефон:</strong> +7 (999) 123-45-67
           </div>
@@ -157,7 +155,7 @@
         <div class="form-group">
           <input type="tel" placeholder="Телефон" required>
         </div>
-        <button type="submit" class="btn btn-primary">Отправить в Telegram</button>
+        <button type="submit" class="btn btn--primary">Отправить в Telegram</button>
       </form>
     </div>
   </section>
@@ -165,15 +163,13 @@
   <!-- Футер -->
   <footer>
     <div class="container">
-      <p>© 2026 Мастерская красоты. Все права защищены.</p>
+      <p>© 2026 Мастерская красоты. Все права защищены</p>
       <div class="footer-links">
         <a href="#">Политика конфиденциальности</a>
         <a href="#">Публичная оферта</a>
       </div>
-      <!-- Фото- crédits: каждый слот заменит фото, авторство добавится сюда -->
-      <div class="footer-photo-credits">
-        Photographs: <span data-credit-hero></span> <span data-credit-about></span> <span data-credit-process></span>
-      </div>
+      <!-- Фото-кредиты: подставляются скриптом (CC BY требует указания авторов) -->
+      <div class="footer-photo-credits" data-credits>Photographs: загрузка…</div>
     </div>
   </footer>
 

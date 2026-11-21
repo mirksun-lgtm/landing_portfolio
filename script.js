@@ -1,77 +1,61 @@
-// HallmarkSlots script — swaps slot placeholders with user's images
-// Single instance — called from HTML before </body>
-// Hallmark rule: never use Unsplash/Pexels/Pixabay URLs directly.
-// Use Wikimedia Commons (CC0/CC BY-SA) or user-supplied photos.
-// See: references/imagery.md § 2 and § 5 for photo credit requirements.
+// HallmarkSlots script — swaps slot placeholders with real photos.
+// Photos: Flickr, CC BY 2.0 (commercial use allowed, attribution required).
+// Credits are set in the footer below. Never use Unsplash/Pexels/Pixabay URLs directly.
 
 function hallmarkSlots(slots) {
-  // Simple implementation: each slot name → find .placeholder[data-slot="name"] and swap
   if (!slots) return;
   Object.entries(slots).forEach(([name, path]) => {
-    const el = document.querySelector(` .placeholder[data-slot="${name}"]`);
+    const el = document.querySelector(`.placeholder[data-slot="${name}"]`);
     if (!el) return;
     const img = document.createElement('img');
     img.src = path;
     img.alt = el.getAttribute('data-alt') || '';
-    img.loading = 'lazy';
+    img.loading = name === 'hero' ? 'eager' : 'lazy';
+    if (name === 'hero') img.fetchPriority = 'high';
+    img.width = el.getBoundingClientRect().width || 800;
+    img.height = el.getBoundingClientRect().height || 600;
     img.style.width = '100%';
     img.style.height = '100%';
     img.style.objectFit = 'cover';
     img.style.borderRadius = getComputedStyle(el).borderRadius;
-    el.innerHTML = ''; // clear placeholder
+    el.innerHTML = '';
     el.appendChild(img);
+    el.classList.add('has-image');
   });
 }
 
-// Update photo credits in footer after images load
-function updatePhotoCredits(slots) {
-  // Hallmark: credits go in footer .footer-photo-credits
-  // Each slot[data-slot="name"] should have its credit set via data-credit attribute or
-  // the script that generated the photo (theme.mjs photos) prints them.
-  // For now, leave as-is — credits will be filled when photos are properly loaded.
-  // Never invent author names or URLs from memory (Hallmark gate 76).
-}
-
-// Demo: when DOM is ready, slot in the user's images
 document.addEventListener('DOMContentLoaded', () => {
-  // Slot names and their future image paths (replace with real paths later)
-  // !!! Important: do not use Unsplash/Pexels/Pixabay direct links — Hallmark gates will FAIL.
-  // Use either:
-  // 1. Paths to your own images: 'images/hero.jpg', 'images/about.jpg', etc.
-  // 2. Run: node <skill-dir>/scripts/theme.mjs photos "subject" --theme studio --n 3
-  //    and use the printed srcset/sizes with credits.
+  // Real local photos, matched to each section's subject
   hallmarkSlots({
-    hero: 'images/screens/hero-desktop.png',     // hero photograph — replace with your own or Hallmark library
-    // about: 'images/about.jpg',                // optional — replace with your photo or omit
-    // process-1: 'images/process/1.jpg',       // etc. — replace with process photos
-    // process-2: 'images/process/2.jpg',
-    // process-3: 'images/process/3.jpg',
-    // process-4: 'images/process/4.jpg',
+    hero: 'images/process-consultation.jpg',      // white face mask, applied with brush
+    about: 'images/about.jpg',                    // client with mirror, result
+    'process-1': 'images/process-mask.jpg',       // therapist at work
+    'process-2': 'images/process-finish.jpg',     // spa salon atmosphere
+    'process-3': 'images/process-result.jpg',     // care oils
+    'process-4': 'images/process-consultation.jpg', // finishing mask
   });
 
-  // Update credits placeholders — Hallmark will fill these automatically when photos load
-  // or you can manually set data-credit attributes on the .placeholder elements
-  const creditElements = {
-    hero: document.querySelector('span[data-credit-hero]'),
-    about: document.querySelector('span[data-credit-about]'),
-    process: document.querySelector('span[data-credit-process]'),
+  // Photo credits — CC BY 2.0 requires attribution (Hallmark gate 76)
+  const credits = {
+    hero: '<a href="https://www.flickr.com/photos/93609956@N05/9865582355" target="_blank" rel="noopener">Zenspa1</a> (CC BY 2.0)',
+    about: '<a href="https://www.flickr.com/photos/76588981@N02/11179260694" target="_blank" rel="noopener">homejobsbymom.com</a> (CC BY 2.0)',
+    'process-1': '<a href="https://www.flickr.com/photos/145748390@N03/30273731091" target="_blank" rel="noopener">Scubaspa Maldives</a> (CC BY 2.0)',
+    'process-2': '<a href="https://www.flickr.com/photos/47808661@N07/5918124637" target="_blank" rel="noopener">Tara Angkor Hotel</a> (CC BY 2.0)',
+    'process-3': '<a href="https://www.flickr.com/photos/22141297@N06/7798556096" target="_blank" rel="noopener">Naomi King</a> (CC BY 2.0)',
   };
-  // Currently just show placeholder text — replace with real credits when photos are set
-  Object.values(creditElements).forEach(el => {
-    if (el) el.textContent = 'фото будет добавлено позже';
-  });
-}
+  const creditEl = document.querySelector('[data-credits]');
+  if (creditEl) {
+    creditEl.innerHTML = 'Photographs: ' + Object.values(credits).join(', ');
+  }
+});
 
-// Telegram send — just copies text and opens Telegram
+// Telegram send — copies text and opens the chat (no fake "sent" state)
 document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
   e.preventDefault();
-  const form = this;
-  const name = form.querySelector('input[type="text"]').value;
-  const phone = form.querySelector('input[type="tel"]').value;
-  const text = `👋 Привет! Хочу записаться на консультацию.\nИмя: ${name}\nТелефон: ${phone}`;
-  // Copy to clipboard and open Telegram
+  const name = this.querySelector('input[type="text"]').value;
+  const phone = this.querySelector('input[type="tel"]').value;
+  const text = `Здравствуйте! Хочу записаться на консультацию.\nИмя: ${name}\nТелефон: ${phone}`;
   navigator.clipboard.writeText(text).then(() => {
-    const telegramUrl = `https://t.me/username?start=book`;
-    window.open(telegramUrl, '_blank');
+    window.open('https://t.me/username', '_blank');
   });
 });
