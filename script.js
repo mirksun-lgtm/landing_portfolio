@@ -19,19 +19,19 @@ function hallmarkSlots(slots) {
 
 document.addEventListener('DOMContentLoaded', () => {
   hallmarkSlots({
-    hero: 'images/about.jpg',
-    about: 'images/process-mask.jpg',
-    'process-1': 'images/process-consultation.jpg',
-    'process-2': 'images/process-result.jpg',
+    hero: 'images/process-finish.jpg',
+    about: 'images/process-result.jpg',
     'process-3': 'images/about.jpg',
-    'process-4': 'images/process-finish.jpg',
+    'process-4': 'images/beauty-face.jpg',
+    'process-1': 'images/process-consultation.jpg',
   });
 
   const credits = {
     a: '<a href="https://www.flickr.com/photos/76588981@N02/11179260694" target="_blank" rel="noopener">homejobsbymom.com</a> (CC BY 2.0)',
-    b: '<a href="https://www.flickr.com/photos/145748390@N03/30273731091" target="_blank" rel="noopener">Scubaspa Maldives</a> (CC BY 2.0)',
-    c: '<a href="https://www.flickr.com/photos/93609956@N05/9865582355" target="_blank" rel="noopener">Zenspa1</a> (CC BY 2.0)',
-    d: '<a href="https://www.flickr.com/photos/22141297@N06/7798556096" target="_blank" rel="noopener">Naomi King</a> (CC BY 2.0)',
+    b: '<a href="https://www.flickr.com/photos/93609956@N05/9865582355" target="_blank" rel="noopener">Zenspa1</a> (CC BY 2.0)',
+    c: '<a href="https://www.flickr.com/photos/22141297@N06/7798556096" target="_blank" rel="noopener">Naomi King</a> (CC BY 2.0)',
+    d: '<a href="https://www.flickr.com/photos/47808661@N07/5918124637" target="_blank" rel="noopener">Tara Angkor Hotel</a> (CC BY 2.0)',
+    e: '<a href="https://www.flickr.com/photos/58842866@N08/5388130101" target="_blank" rel="noopener">tommerton2010</a> (CC BY 2.0)',
   };
   const creditEl = document.querySelector('[data-credits]');
   if (creditEl) creditEl.innerHTML = 'Photographs: ' + Object.values(credits).join(', ');
