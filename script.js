@@ -19,7 +19,7 @@ function hallmarkSlots(slots) {
 
 document.addEventListener('DOMContentLoaded', () => {
   hallmarkSlots({
-    hero: 'images/process-finish.jpg',
+    hero: 'images/hero-spa.jpg',
     about: 'images/process-result.jpg',
     'process-3': 'images/about.jpg',
     'process-4': 'images/beauty-face.jpg',
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     a: '<a href="https://www.flickr.com/photos/76588981@N02/11179260694" target="_blank" rel="noopener">homejobsbymom.com</a> (CC BY 2.0)',
     b: '<a href="https://www.flickr.com/photos/93609956@N05/9865582355" target="_blank" rel="noopener">Zenspa1</a> (CC BY 2.0)',
     c: '<a href="https://www.flickr.com/photos/22141297@N06/7798556096" target="_blank" rel="noopener">Naomi King</a> (CC BY 2.0)',
-    d: '<a href="https://www.flickr.com/photos/47808661@N07/5918124637" target="_blank" rel="noopener">Tara Angkor Hotel</a> (CC BY 2.0)',
+    d: '<a href="https://stocksnap.io/photo/smiling-woman-3WMJWQPS9L" target="_blank" rel="noopener">Authentic Stock</a> (CC0)',
     e: '<a href="https://www.flickr.com/photos/58842866@N08/5388130101" target="_blank" rel="noopener">tommerton2010</a> (CC BY 2.0)',
   };
   const creditEl = document.querySelector('[data-credits]');
