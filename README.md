@@ -10,27 +10,27 @@
 
 - HTML5 + CSS3 + vanilla JS
 - Нет фреймворков и сборщиков
-- Дизайн: Hallmark, тема Studio (светлая печатная бумага, серифные заголовки, оранжевый акцент)
+- Дизайн: Montclair (пудрово-розовая палитра, скруглённые секции, Cormorant Garamond + Jost)
 
 ## Блоки
 
-1. Первый экран: имя, обещание результата, кнопка «Записаться» → Telegram
-2. Обо мне: опыт, подход, сертификаты
-3. Услуги: 4 карточки с ценами (пример-заглушки)
-4. Фото процесса: 4 фото с подписями
+1. Первый экран: обещание результата, кнопка «Записаться» → Telegram
+2. Полоса преимуществ: безоперационные процедуры, диагностика, сертификаты, комфорт
+3. Обо мне: цель, философия, подход, сертификаты
+4. Услуги: 3 карточки (пример-заглушки)
 5. Отзывы: 3 отзыва-заглушки с пометкой «пример»
 6. Контакты + форма: имя, телефон → копирование текста и переход в Telegram
 7. Футер: копирайт, кредиты фото
 
 ## Фото
 
-Реальные фотографии из Flickr, лицензия **CC BY 2.0** (коммерческое использование разрешено, требуется указание автора). Авторы указаны в футере страницы в блоке `data-credits`.
+Фотографии с лицензией **CC BY 2.0** (Flickr) и **CC0** (StockSnap). Авторы и ссылки указаны в футере страницы в блоке `data-credits`.
 
-Файлы: `images/about.jpg`, `images/process-consultation.jpg`, `images/process-mask.jpg`, `images/process-finish.jpg`, `images/process-result.jpg`.
+Файлы: `images/hero-spa.jpg`, `images/about.jpg`, `images/process-consultation.jpg`, `images/process-result.jpg`, `images/beauty-face.jpg`.
 
 ## Деплой
 
-GitHub Pages: https://mirsun-lgtm.github.io/landing_portfolio/
+GitHub Pages: https://mirksun-lgtm.github.io/landing_portfolio/
 
 Источник: ветка `main`, папка `/ (root)`. Файл `.nojekyll` отключает обработку Jekyll.
 
@@ -45,6 +45,7 @@ GitHub Pages: https://mirsun-lgtm.github.io/landing_portfolio/
 
 ## Проверки
 
-- Hallmark sloplint: 0 FAIL
 - Адаптив: 1024 / 768 / 480px, горизонтального скролла нет
 - SEO: title, description, один H1, alt у всех фото
+- W3C Nu Validator: 0 ошибок
+- Lighthouse: Performance 100, SEO 100, Best Practices 100

@@ -8,7 +8,7 @@
   --color-paper-3: oklch(89% 0.022 65);
   --color-ink: oklch(28% 0.02 60);
   --color-ink-2: oklch(45% 0.02 60);
-  --color-muted: oklch(55% 0.02 60);
+  --color-muted: oklch(48% 0.02 60);
   --color-rule: oklch(85% 0.015 65);
   --color-accent: oklch(48% 0.06 55);
   --color-accent-ink: oklch(98% 0.005 70);
@@ -74,7 +74,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing:
 .strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
 .strip-item { background: var(--color-paper); border: 1px solid var(--color-rule); border-radius: var(--radius-card); padding: var(--space-lg); min-height: 210px; }
 .strip-icon { font-size: 1.4rem; color: var(--color-accent); }
-.strip-item h3 { font-size: 1.35rem; margin: var(--space-md) 0 var(--space-sm); line-height: 1.15; }
+.strip-item h2 { font-size: 1.35rem; margin: var(--space-md) 0 var(--space-sm); line-height: 1.15; }
 .strip-item p { font-size: 0.9rem; color: var(--color-muted); line-height: 1.5; }
 
 /* About — rounded section */

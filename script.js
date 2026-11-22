@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const creditEl = document.querySelector('[data-credits]');
   if (creditEl) creditEl.innerHTML = 'Photographs: ' + Object.values(credits).join(', ');
 
-  // Tabs (visual only — same content for each specialization)
+  // Tabs (visual filter — same cards shown for each specialization)
   document.querySelectorAll('.tab').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      document.querySelectorAll('.tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
       btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
+      btn.setAttribute('aria-pressed', 'true');
     });
   });
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = this.querySelector('input[type="text"]').value;
     const phone = this.querySelector('input[type="tel"]').value;
     const text = `Здравствуйте! Хочу записаться на консультацию.\nИмя: ${name}\nТелефон: ${phone}`;
-    navigator.clipboard.writeText(text).then(() => {
+    navigator.clipboard.writeText(text).catch(() => {}).then(() => {
       window.open('https://t.me/username', '_blank');
     });
   });

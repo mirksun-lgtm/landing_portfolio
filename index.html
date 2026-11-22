@@ -20,10 +20,10 @@
   <!-- Шапка -->
   <header class="nav">
     <div class="container">
-      <a href="#" class="logo" aria-label="Aura — на главную">AURA<span class="logo-sub">clinic</span></a>
+      <a href="#" class="logo">AURA<span class="logo-sub">clinic</span></a>
       <nav aria-label="Навигация">
         <ul class="nav-links">
-          <li><a href="#specialties">Услуги</a></li>
+          <li><a href="#services">Услуги</a></li>
           <li><a href="#about">Обо мне</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
@@ -32,6 +32,7 @@
     </div>
   </header>
 
+  <main>
   <!-- Герой -->
   <section class="hero">
     <div class="container hero-inner">
@@ -52,22 +53,22 @@
     <div class="container strip-grid">
       <div class="strip-item">
         <span class="strip-icon">✦</span>
-        <h3>Безоперационные<br>процедуры</h3>
+        <h2>Безоперационные<br>процедуры</h2>
         <p>Результат без разрезов и длительной реабилитации</p>
       </div>
       <div class="strip-item">
         <span class="strip-icon">✧</span>
-        <h3>Точная<br>диагностика</h3>
+        <h2>Точная<br>диагностика</h2>
         <p>Подбираем уход под ваш тип кожи и задачу</p>
       </div>
       <div class="strip-item">
         <span class="strip-icon">✦</span>
-        <h3>Сертифицированный<br>косметолог</h3>
+        <h2>Сертифицированный<br>косметолог</h2>
         <p>Опыт 5 лет и регулярное повышение квалификации</p>
       </div>
       <div class="strip-item">
         <span class="strip-icon">✧</span>
-        <h3>Комфорт<br>и забота</h3>
+        <h2>Комфорт<br>и забота</h2>
         <p>Спокойная атмосфера и внимание к каждому клиенту</p>
       </div>
     </div>
@@ -77,7 +78,7 @@
   <section class="about" id="about">
     <div class="container about-inner">
       <div class="about-text">
-        <p class="eyebrow-note">Почему выбирают нас</p>
+        <p class="eyebrow-note">Обо мне</p>
         <h2>Естественная красота без вмешательств</h2>
         <p class="lead">Мы сочетаем медицинскую точность и бережный подход, чтобы результат выглядел естественно, а процедуры проходили комфортно.</p>
         <p>Работаю только с сертифицированными средствами и современными методиками. Каждая процедура начинается с консультации и подбора индивидуального плана ухода.</p>
@@ -97,10 +98,10 @@
         <h2>Специальности</h2>
         <p>Выберите то, что важно именно вам</p>
       </div>
-      <div class="tabs" role="tablist" aria-label="Специальности">
-        <button type="button" class="tab active" role="tab" aria-selected="true" data-tab="face">Для лица</button>
-        <button type="button" class="tab" role="tab" aria-selected="false" data-tab="body">Для тела</button>
-        <button type="button" class="tab" role="tab" aria-selected="false" data-tab="health">Здоровье кожи</button>
+      <div class="tabs" role="group" aria-label="Специальности">
+        <button type="button" class="tab active" aria-pressed="true" data-tab="face">Для лица</button>
+        <button type="button" class="tab" aria-pressed="false" data-tab="body">Для тела</button>
+        <button type="button" class="tab" aria-pressed="false" data-tab="health">Здоровье кожи</button>
       </div>
       <div class="services-grid" id="tab-face">
         <article class="service-card">
@@ -170,10 +171,12 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Футер -->
   <footer>
     <div class="container">
-      <a href="#" class="logo" aria-label="Aura — на главную">AURA<span class="logo-sub">clinic</span></a>
+      <a href="#" class="logo">AURA<span class="logo-sub">clinic</span></a>
       <p>© 2026 Aura Clinic. Все права защищены</p>
       <div class="footer-links">
         <a href="#">Политика конфиденциальности</a>
