@@ -1,7 +1,3 @@
-/* Hallmark · v2.0.0 · theme: custom Montclair-inspired · genre: editorial · job: book */
-
-/* Hallmark · answered F18 · hallmarkSlots in external script.js fills every data-slot on DOMContentLoaded */
-
 :root {
   --color-paper: oklch(97% 0.008 70);
   --color-paper-2: oklch(93% 0.018 70);
@@ -94,11 +90,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing:
 .tab { padding: var(--space-sm) var(--space-lg); border: 1px solid var(--color-rule); border-radius: 999px; background: transparent; font: 400 0.95rem var(--font-body); color: var(--color-ink-2); cursor: pointer; }
 .tab.active { background: var(--color-accent); color: var(--color-accent-ink); border-color: var(--color-accent); }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.services-grid[hidden] { display: none; }
 .service-card { background: var(--color-paper); border: 1px solid var(--color-rule); border-radius: var(--radius-card); padding: var(--space-md); }
 .card-img .placeholder { aspect-ratio: 4/3; border-radius: var(--radius-card); margin-bottom: var(--space-lg); }
 .service-card h3 { font-size: 1.6rem; margin-bottom: var(--space-sm); }
 .service-card p { color: var(--color-muted); font-size: 0.95rem; min-height: 3em; }
-.card-more { display: inline-block; margin-top: var(--space-md); color: var(--color-accent); font-size: 0.9rem; }
 
 /* Reviews */
 .reviews { padding: 0 0 var(--space-3xl); }
@@ -129,7 +125,6 @@ footer { background: var(--color-ink); color: var(--color-paper); padding: var(-
 footer .logo { color: var(--color-paper); }
 footer .logo-sub { color: var(--color-rule); }
 footer p { margin: var(--space-md) 0; font-size: 0.9rem; color: var(--color-rule); }
-.footer-links { display: flex; gap: var(--space-lg); flex-wrap: wrap; }
 footer a { color: var(--color-rule); font-size: 0.9rem; text-decoration: none; }
 .footer-photo-credits { margin-top: var(--space-lg); font-size: 0.7rem; color: var(--color-rule); line-height: 1.6; }
 .footer-photo-credits a { color: var(--color-rule); font-size: inherit; text-decoration: underline; }

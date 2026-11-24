@@ -8,8 +8,6 @@ function hallmarkSlots(slots) {
       img.alt = el.getAttribute('data-alt') || '';
       img.loading = name === 'hero' ? 'eager' : 'lazy';
       if (name === 'hero') img.fetchPriority = 'high';
-      img.width = 800;
-      img.height = 600;
       el.innerHTML = '';
       el.appendChild(img);
       el.classList.add('has-image');
@@ -24,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     'process-3': 'images/about.jpg',
     'process-4': 'images/beauty-face.jpg',
     'process-1': 'images/process-consultation.jpg',
+    'body-1': 'images/body-massage.jpg',
+    'body-2': 'images/body-candles.jpg',
+    'body-3': 'images/body-rest.jpg',
+    'health-1': 'images/skin-serum.jpg',
+    'health-2': 'images/skin-cream.jpg',
+    'health-3': 'images/skin-smile.jpg',
   });
 
   const credits = {
@@ -36,12 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const creditEl = document.querySelector('[data-credits]');
   if (creditEl) creditEl.innerHTML = 'Photographs: ' + Object.values(credits).join(', ');
 
-  // Tabs (visual filter — same cards shown for each specialization)
-  document.querySelectorAll('.tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
+  // Tabs: real tablist — arrow keys move focus, click/Enter activates panel
+  const tabs = [...document.querySelectorAll('.tab')];
+  const activateTab = btn => {
+    tabs.forEach(t => {
+      const on = t === btn;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls'));
+      panel.hidden = !on;
+      // lazy-картинки в скрытой панели не стартуют сами — форсируем при показе
+      if (on) panel.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = 'eager'; });
+    });
+  };
+  tabs.forEach((btn, i) => {
+    btn.addEventListener('click', () => activateTab(btn));
+    btn.addEventListener('keydown', e => {
+      const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      const next = tabs[(i + dir + tabs.length) % tabs.length];
+      activateTab(next);
+      next.focus();
     });
   });
 

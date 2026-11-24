@@ -98,29 +98,60 @@
         <h2>Специальности</h2>
         <p>Выберите то, что важно именно вам</p>
       </div>
-      <div class="tabs" role="group" aria-label="Специальности">
-        <button type="button" class="tab active" aria-pressed="true" data-tab="face">Для лица</button>
-        <button type="button" class="tab" aria-pressed="false" data-tab="body">Для тела</button>
-        <button type="button" class="tab" aria-pressed="false" data-tab="health">Здоровье кожи</button>
+      <div class="tabs" role="tablist" aria-label="Специальности">
+        <button type="button" class="tab active" role="tab" id="tab-face" aria-controls="panel-face" aria-selected="true">Для лица</button>
+        <button type="button" class="tab" role="tab" id="tab-body" aria-controls="panel-body" aria-selected="false" tabindex="-1">Для тела</button>
+        <button type="button" class="tab" role="tab" id="tab-health" aria-controls="panel-health" aria-selected="false" tabindex="-1">Здоровье кожи</button>
       </div>
-      <div class="services-grid" id="tab-face">
+      <div class="services-grid" role="tabpanel" id="panel-face" aria-labelledby="tab-face" tabindex="0">
         <article class="service-card">
           <div class="card-img"><div class="placeholder" data-slot="process-3" data-alt="Девушка оценивает кожу лица в зеркале"></div></div>
           <h3>Моделирование<br>лица</h3>
           <p>Мягкая коррекция контуров без операции</p>
-          <span class="card-more">Подробнее →</span>
         </article>
         <article class="service-card">
           <div class="card-img"><div class="placeholder" data-slot="process-4" data-alt="Крупный план ухоженной кожи лица"></div></div>
           <h3>Омоложение<br>кожи</h3>
           <p>Восстановление упругости и сияния</p>
-          <span class="card-more">Подробнее →</span>
         </article>
         <article class="service-card">
           <div class="card-img"><div class="placeholder" data-slot="process-1" data-alt="Нанесение очищающей маски на лицо"></div></div>
           <h3>Чистка<br>лица</h3>
           <p>Глубокая очистка и сужение пор</p>
-          <span class="card-more">Подробнее →</span>
+        </article>
+      </div>
+      <div class="services-grid" role="tabpanel" id="panel-body" aria-labelledby="tab-body" tabindex="0" hidden>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="body-1" data-alt="Массаж плеча и спины на белом полотенце"></div></div>
+          <h3>Массаж<br>тела</h3>
+          <p>Лимфодренаж и снятие напряжения</p>
+        </article>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="body-2" data-alt="Массаж спины при тёплом свете"></div></div>
+          <h3>Уход<br>за телом</h3>
+          <p>Питание и увлажнение кожи</p>
+        </article>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="body-3" data-alt="Женщина отдыхает на массажном столе"></div></div>
+          <h3>Релакс-<br>ритуалы</h3>
+          <p>Отдых и восстановление после процедур</p>
+        </article>
+      </div>
+      <div class="services-grid" role="tabpanel" id="panel-health" aria-labelledby="tab-health" tabindex="0" hidden>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="health-1" data-alt="Крупный план: пипетка с сывороткой у глаза"></div></div>
+          <h3>Сыворотки<br>и активы</h3>
+          <p>Точечное питание под задачу кожи</p>
+        </article>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="health-2" data-alt="Девушка наносит крем на щёку"></div></div>
+          <h3>Домашний<br>уход</h3>
+          <p>Подбор кремов после процедуры</p>
+        </article>
+        <article class="service-card">
+          <div class="card-img"><div class="placeholder" data-slot="health-3" data-alt="Улыбающееся лицо с кремом на щеке, полотенце на голове"></div></div>
+          <h3>Сияние<br>и тонус</h3>
+          <p>Ровный тон и свежесть кожи</p>
         </article>
       </div>
     </div>
@@ -178,10 +209,6 @@
     <div class="container">
       <a href="#" class="logo">AURA<span class="logo-sub">clinic</span></a>
       <p>© 2026 Aura Clinic. Все права защищены</p>
-      <div class="footer-links">
-        <a href="#">Политика конфиденциальности</a>
-        <a href="#">Публичная оферта</a>
-      </div>
       <div class="footer-photo-credits" data-credits>Photographs: загрузка…</div>
     </div>
   </footer>

@@ -17,7 +17,7 @@
 1. Первый экран: обещание результата, кнопка «Записаться» → Telegram
 2. Полоса преимуществ: безоперационные процедуры, диагностика, сертификаты, комфорт
 3. Обо мне: цель, философия, подход, сертификаты
-4. Услуги: 3 карточки (пример-заглушки)
+4. Услуги: 3 вкладки (лицо / тело / здоровье кожи), по 3 карточки, настоящие табы с переключением
 5. Отзывы: 3 отзыва-заглушки с пометкой «пример»
 6. Контакты + форма: имя, телефон → копирование текста и переход в Telegram
 7. Футер: копирайт, кредиты фото
@@ -26,7 +26,7 @@
 
 Фотографии с лицензией **CC BY 2.0** (Flickr) и **CC0** (StockSnap). Авторы и ссылки указаны в футере страницы в блоке `data-credits`.
 
-Файлы: `images/hero-spa.jpg`, `images/about.jpg`, `images/process-consultation.jpg`, `images/process-result.jpg`, `images/beauty-face.jpg`.
+Файлы: `images/hero-spa.jpg`, `images/about.jpg`, `images/process-consultation.jpg`, `images/process-result.jpg`, `images/beauty-face.jpg` (CC BY), `images/body-massage.jpg`, `images/body-candles.jpg`, `images/body-rest.jpg`, `images/skin-serum.jpg`, `images/skin-cream.jpg`, `images/skin-smile.jpg` (CC0, StockSnap).
 
 ## Деплой
 
