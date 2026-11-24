@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e: '<a href="https://www.flickr.com/photos/58842866@N08/5388130101" target="_blank" rel="noopener">tommerton2010</a> (CC BY 2.0)',
   };
   const creditEl = document.querySelector('[data-credits]');
-  if (creditEl) creditEl.innerHTML = 'Photographs: ' + Object.values(credits).join(', ');
+  if (creditEl) creditEl.innerHTML = 'Фото: ' + Object.values(credits).join(', ');
 
   // Tabs: real tablist — arrow keys move focus, click/Enter activates panel
   const tabs = [...document.querySelectorAll('.tab')];
@@ -72,7 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = this.querySelector('input[type="text"]').value;
     const phone = this.querySelector('input[type="tel"]').value;
     const text = `Здравствуйте! Хочу записаться на консультацию.\nИмя: ${name}\nТелефон: ${phone}`;
-    navigator.clipboard.writeText(text).catch(() => {}).then(() => {
+    const copied = navigator.clipboard?.writeText
+      ? navigator.clipboard.writeText(text)
+      : Promise.reject();
+    copied.catch(() => window.prompt('Скопируйте текст заявки:', text)).then(() => {
       window.open('https://t.me/username', '_blank');
     });
   });
