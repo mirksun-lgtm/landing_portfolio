@@ -24,9 +24,9 @@
 
 ## Фото
 
-Фотографии с лицензией **CC BY 2.0** (Flickr) и **CC0** (StockSnap, Rawpixel). Авторы CC BY указаны в футере страницы в блоке `data-credits`; CC0 не требует указания авторства.
+Фотографии с лицензией **CC BY 2.0** (Flickr), **CC0** (StockSnap, Rawpixel) и сгенерированный герой (FLUX 3 / ComfyUI, автор Олег). Авторы CC BY указаны в футере страницы в блоке `data-credits`; CC0 не требует указания авторства.
 
-Файлы: `images/hero-spa.jpg`, `images/about.jpg`, `images/process-consultation.jpg`, `images/process-result.jpg`, `images/beauty-face.jpg` (CC BY), `images/body-massage.jpg`, `images/body-care.jpg`, `images/body-relax.jpg` (CC0, Rawpixel: 5913670, 5949647, 5944979), `images/skin-serum.jpg`, `images/skin-cream.jpg`, `images/skin-smile.jpg` (CC0, StockSnap).
+Файлы: `images/hero-spa.jpg` (собственная генерация), `images/about.jpg`, `images/process-consultation.jpg`, `images/process-result.jpg`, `images/beauty-face.jpg` (CC BY), `images/body-massage.jpg`, `images/body-care.jpg`, `images/body-relax.jpg` (CC0, Rawpixel: 5913670, 5949647, 5944979), `images/skin-serum.jpg`, `images/skin-cream.jpg`, `images/skin-smile.jpg` (CC0, StockSnap).
 
 ## Деплой
 

@@ -58,6 +58,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing:
 .hero h1 { font-size: clamp(3rem, 5vw, 4.6rem); margin-bottom: var(--space-lg); max-width: 12ch; }
 .hero .lead { max-width: 46ch; margin-bottom: var(--space-xl); }
 .hero-image .placeholder { aspect-ratio: 4/4.2; border-radius: var(--radius-section); }
+.hero-image .placeholder img { object-position: center top; }
 
 /* Placeholders */
 .placeholder { width: 100%; aspect-ratio: 4/3; background: var(--color-paper-2); border-radius: var(--radius-card); position: relative; overflow: hidden; }
